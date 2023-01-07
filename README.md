@@ -1,5 +1,6 @@
-# The Silent Killer:
-Underlying Factors in Soccer Injuries
+# The Silent Killer: Underlying Factors in Soccer Injuries
+
+The following study was done as final project project for MIE368: Analytics in Action, a course offered by the University of Toronto
 
 ## Abstract
 
