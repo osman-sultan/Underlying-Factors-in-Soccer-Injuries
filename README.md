@@ -1,6 +1,6 @@
 # The Silent Killer: Underlying Factors in Soccer Injuries
 
-The following study was done as final project project for MIE368: Analytics in Action, a course offered by the University of Toronto
+The following study was done as final project project for MIE368: Analytics in Action, a course offered by the University of Toronto. This repo contains two notebooks: the web scraper used to obtain data from Transfermarkt.com and Fbref.com, and the models used to assess the data. These notebooks will work in Google Colab out the box, otherwise several dependencies are needed (refer to imports in the notebooks). A final report compiling all findings is also available. 
 
 ## Abstract
 
