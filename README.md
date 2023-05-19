@@ -2,7 +2,7 @@
 
 Behind the spectacle of goals and triumphant victories in European football, lie the silent tales of injuries, an understated yet influential player in the game. By applying machine learning to injury data, our investigation uncovers a hidden dimension to club success, revealing an often overlooked but crucially important aspect of the beautiful game.
 
-Motivation for this project is highly inspired by the movie [Money Ball](<https://en.wikipedia.org/wiki/Moneyball_(film)>) and my own love for Football. Visca Barca! 🔴🔵
+Motivation for this project is highly inspired by the movie [Money Ball](<https://en.wikipedia.org/wiki/Moneyball_(film)>) and my own love for Football. Visca Barca🔴🔵!
 
 ## Table of Contents
 
