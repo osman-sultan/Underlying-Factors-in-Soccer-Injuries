@@ -247,14 +247,17 @@ def main():
     # Data Import
     import os
 
+    # Get the current working directory
     cwd = os.getcwd()
+    # Get the parent directory
+    cwd = os.path.dirname(cwd)
 
-    X_train = pd.read_csv(os.path.join(cwd, "/final_data/X_train.csv"))
-    X_test = pd.read_csv(os.path.join(cwd, "/final_data/X_test.csv"))
-    X_val = pd.read_csv(os.path.join(cwd, "/final_data/X_val.csv"))
-    y_train = pd.read_csv(os.path.join(cwd, "/final_data/y_train.csv"))
-    y_test = pd.read_csv(os.path.join(cwd, "/final_data/y_test.csv"))
-    y_val = pd.read_csv(os.path.join(cwd, "/final_data/y_val.csv"))
+    X_train = pd.read_csv(os.path.join(cwd, "/data/final_data/X_train.csv"))
+    X_test = pd.read_csv(os.path.join(cwd, "/data/final_data/X_test.csv"))
+    X_val = pd.read_csv(os.path.join(cwd, "/data/final_data/X_val.csv"))
+    y_train = pd.read_csv(os.path.join(cwd, "/data/final_data/y_train.csv"))
+    y_test = pd.read_csv(os.path.join(cwd, "/data/final_data/y_test.csv"))
+    y_val = pd.read_csv(os.path.join(cwd, "/data/final_data/y_val.csv"))
 
     # Create a data frame to keep track of all the models we train
     model_names = ("LR_L2", "LR_L1", "RF", "ANN")
