@@ -134,13 +134,13 @@ After refining the models, significant improvements were observed. The RF model 
 
 The learning curves demonstrated good fits for the LR-L1, LR-L2, and ANN models, with accuracy converging over time. In contrast, the RF model showed signs of overfitting, as indicated by its training accuracy plateauing near 1 and the validation accuracy initially increasing then decreasing.
 
-### Best Model 🏆
+### Best Model
 
 <p align="center">
   <img src="./images/confusionmatrix_lrl2.png" alt="Class Imbalance">
 </p>
 
-After final analysis, the LR-L2 model displayed superior performance with an increased recall by 0.234 post-engineering, denoting its effectiveness in correctly identifying true positives. The model also exhibited a false negative rate of 23%, which, again, is an acceptable error given the context. It may lead to some players being overcautiously labeled as at risk, but this ultimately promotes overall squad health. Moreover, the LR-L2 model exhibited neither underfitting nor overfitting on the loss curve indicating a balanced bias-variance trade-off. With an ROC AUC of 0.726, LR-L2 proved to be a robust tool for providing valuable insights to soccer teams, despite the initial low correlation of selected features with the target.
+After final analysis, the LR-L2 model 🏆 displayed superior performance with an increased recall by 0.234 post-engineering, denoting its effectiveness in correctly identifying true positives. The model also exhibited a false negative rate of 23%, which, again, is an acceptable error given the context. It may lead to some players being overcautiously labeled as at risk, but this ultimately promotes overall squad health. Moreover, the LR-L2 model exhibited neither underfitting nor overfitting on the loss curve indicating a balanced bias-variance trade-off. With an ROC AUC of 0.726, LR-L2 proved to be a robust tool for providing valuable insights to soccer teams, despite the initial low correlation of selected features with the target.
 
 ## Discussion and Future Steps
 
