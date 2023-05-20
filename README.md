@@ -154,4 +154,4 @@ This study had its limitations. The dataset, sourced from Europe's top 5 leagues
 
 Despite these shortcomings, this study provided insights into factors that don't significantly contribute to injuries. The LR-L2 model, despite its limitations, demonstrated a recall of 0.851, offering a satisfactory response to the initial problem statement. So, while it's clear that improvements can be made, this investigation has laid solid groundwork for future research in sports injury prediction.
 
-If you would like to discuss all thing data science and Football further or would like to the full report please reach out to me on LinkedIn or osman.sultan@mail.utoronto.ca.
+_If you would like to discuss all thing data science and football further or would like to read the full report please reach out to me on LinkedIn or osman.sultan@mail.utoronto.ca._
