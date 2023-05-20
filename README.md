@@ -18,7 +18,7 @@ Visca Barca! 🔴🔵
   - [Model Engineering Techniques](#model-engineering-techniques)
 - [Model Building](#model-building)
 - [Results](#results)
-  - [Best Model 🏆](#best-model)
+  - [Best Model 🏆](#best-model-🏆)
 - [Discussion and Future Steps](#discussion-and-future-steps)
 
 ## Introduction
