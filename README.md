@@ -1,6 +1,6 @@
 # The Silent Killer: Underlying Factors in Soccer Injuries
 
-Behind the spectacle of goals and triumphant victories in European football, lie the silent tales of injuries, an understated yet influential player in the game. By applying machine learning to injury data, our investigation uncovers a hidden dimension to club success, revealing an often overlooked but crucially important aspect of the beautiful game.
+Behind the spectacle of goals and triumphant victories in European football, lie the silent tales of injuries, an understated yet influential player in the game. By applying machine learning to injury data, this investigation uncovers a hidden dimension to club success, revealing an often overlooked but crucially important aspect of the beautiful game.
 
 Motivation for this project is highly inspired by the movie [Money Ball](<https://en.wikipedia.org/wiki/Moneyball_(film)>) and my own love for Football.
 
@@ -61,19 +61,19 @@ The following libraries are used in this project:
 
 In order to build effective models, a comprehensive dataset scraped from Transfermarkt and FBREF was necessary. This dataset included a diverse range of biometric and in-game statistical data for soccer players competing in Europe's top 5 leagues. The target feature was the player's current injury status.
 
-Our preparation process was thorough, with meticulous data cleaning and pre-processing undertaken to ensure the dataset was fit for purpose. This included unpacking arrays, manipulating strings, encoding categorical data, and addressing missing values.
+The preparation process was thorough, with meticulous data cleaning and pre-processing undertaken to ensure the dataset was fit for purpose. This included unpacking arrays, manipulating strings, encoding categorical data, and addressing missing values.
 
-After eliminating duplicate entries and resolving inconsistencies in player names across the two sources, we compiled a robust, cleaned dataset of 1923 entries. Each entry was one-hot-encoded into numeric types to ensure the data was ready for use in our predictive models.
+After eliminating duplicate entries and resolving inconsistencies in player names across the two sources, a robust, cleaned dataset of 1923 entries was compiled. Each entry was one-hot-encoded into numeric types to ensure the data was ready for use in the predictive models.
 
 ## Data and Model Engineering
 
-To provide insight into our data and influence modeling decisions, we conducted exploratory data analysis (EDA) on both training and testing data. The results of our EDA would help us answer questions relating to model parameters, model performance, model engineering techniques, and further tuning of the dataset.
+To provide insight into the data and influence modeling decisions, exploratory data analysis (EDA) on both training and testing data was conducted. The results of the EDA would help us answer questions relating to model parameters, model performance, model engineering techniques, and further tuning of the dataset.
 
 <p align="center">
   <img src="./images/class_imbalance.png" alt="Class Imbalance">
 </p>
 
-The training data initially showed a class imbalance, with more non-injured than injured player entries. This could impact the model's precision, making it biased towards non-injury predictions. To address this, we used the SMOTE oversampling technique to balance the dataset. Similarly, the testing set also had class imbalance. To fix this, we adjusted the distribution of injured player entries between the training and testing sets before model training to ensure unseen data during testing.
+The training data initially showed a class imbalance, with more non-injured than injured player entries. This could impact the model's precision, making it biased towards non-injury predictions. To address this, the SMOTE oversampling technique to balance the dataset was usedd. Similarly, the testing set also had class imbalance. To fix this, the distribution of injured player entries between the training and testing sets was adjusted before model training to ensure unseen data during testing.
 
 ### Need for Engineering
 
@@ -81,13 +81,13 @@ The training data initially showed a class imbalance, with more non-injured than
   <img src="./images/correlation.png" alt="Class Imbalance">
 </p>
 
-The EDA indicated that the initial features in the dataset had low correlation with the target, which provided limited insights into the impact of the features on our target. This necessitated the implementation of feature engineering to discover features that might have a stronger correlation with the target.
+The EDA indicated that the initial features in the dataset had low correlation with the target, which provided limited insights into the impact of the features on the target. This necessitated the implementation of feature engineering to discover features that might have a stronger correlation with the target.
 
 <p align="center">
   <img src="./images/magnitude_disparity.png" alt="Class Imbalance">
 </p>
 
-The EDA also revealed large differences in magnitudes among the features. This disparity can affect the performance of models that use gradient descent-based algorithms, like the Artificial Neural Network (ANN) model used in this project. Unscaled features can lead to slower training and suboptimal solutions. To mitigate this, we decided to implement feature scaling to standardize the range of the feature values, which can result in faster and more effective training of the ANN model.
+The EDA also revealed large differences in magnitudes among the features. This disparity can affect the performance of models that use gradient descent-based algorithms, like the Artificial Neural Network (ANN) model used in this project. Unscaled features can lead to slower training and suboptimal solutions. To mitigate this, implementation of feature scaling to standardize the range of the feature values was decided, which can result in faster and more effective training of the ANN model.
 
 ### Model Engineering Techniques
 
@@ -105,9 +105,9 @@ Lastly, feature selection was implemented to reduce redundancy and focus on the 
 
 ### Baseline Selection
 
-Initial baseline models included logistic regression (LR), a random forest classification model (RF), and an artificial neural network (ANN). We used lasso (L1) and ridge (L2) regularization with LR to improve model accuracy without additional engineering. RF, being robust to missing values and outliers, was chosen for its ensemble learning capability and stability in reducing overfitting.
+Initial baseline models included logistic regression (LR), a random forest classification model (RF), and an artificial neural network (ANN). Lasso (L1) and ridge (L2) regularization with LR was used to improve model accuracy without additional engineering. RF, being robust to missing values and outliers, was chosen for its ensemble learning capability and stability in reducing overfitting.
 
-LR and RF models were chosen for their simplicity, fast implementation, and fewer parameters, allowing for better generalization and more accurate results on the test set. Considering the small dataset size, it was crucial to avoid overly complex models that risk overfitting. However, to contrast with simpler models, we also included an ANN, a complex model with many parameters.
+LR and RF models were chosen for their simplicity, fast implementation, and fewer parameters, allowing for better generalization and more accurate results on the test set. Considering the small dataset size, it was crucial to avoid overly complex models that risk overfitting. However, to contrast with simpler models, an standard ANN was also used.
 
 Baseline models were assessed mainly with default hyperparameters, providing a reference point for later optimizations.
 
@@ -122,11 +122,11 @@ With the dataset now optimized, hyperparameters for Logistic Regression (LR) and
 
 ## Results
 
-Before implementing models, we set a threshold of 0.4 for classifying the target value to account for class imbalance. This adjustment allows for more true positives at the expense of higher false negatives, which is acceptable given our problem context. Mislabeling a player as at risk only results in increased caution, potentially aiding their physical fitness.
+Before implementing models, a threshold of 0.4 was set for classifying the target value to account for class imbalance. This adjustment allows for more true positives at the expense of higher false negatives, which is acceptable given the problem context. Mislabeling a player as at risk only results in increased caution, potentially aiding their physical fitness.
 
-Quantitatively, initial performance of our models was not satisfactory; the RF model showed zero precision, recall, and score, and an ROC AUC score of 0.5, which equates to random guessing. Similarly, the ANN model demonstrated a low precision of 0.143, recall of 0.029, score of 0.086, and ROC AUC of 0.5.
+Quantitatively, initial performance of the models was not satisfactory; the RF model showed zero precision, recall, and score, and an ROC AUC score of 0.5, which equates to random guessing. Similarly, the ANN model demonstrated a low precision of 0.143, recall of 0.029, score of 0.086, and ROC AUC of 0.5.
 
-After refining our models, significant improvements were observed. The RF model showed a precision of 0.184, recall of 0.400, score of 0.292, and ROC AUC of 0.608. Most notably, the LR-L2 model showed a precision of 0.181, recall of 0.851, score of 0.519, and an impressive ROC AUC of 0.726.
+After refining the models, significant improvements were observed. The RF model showed a precision of 0.184, recall of 0.400, score of 0.292, and ROC AUC of 0.608. Most notably, the LR-L2 model showed a precision of 0.181, recall of 0.851, score of 0.519, and an impressive ROC AUC of 0.726.
 
 <p align="center">
   <img src="./images/loss_curves.png" alt="Class Imbalance">
@@ -144,7 +144,7 @@ After final analysis, the LR-L2 model displayed superior performance with an inc
 
 ## Discussion and Future Steps
 
-This exploration into predicting soccer injuries kicked off with an interesting coincidence. While testing our models, one identified Neymar, the world-renowned Brazilian footballer, as at risk of injury. Funny enough, a week earlier, Neymar sustained an injury during a match against Serbia in the 2022 Qatar World Cup. It seemed our model was onto something. However, it's important to note that Neymar has a history of numerous injuries, a factor that is highly correlated with our model's predictions.
+This exploration into predicting soccer injuries kicked off with an interesting coincidence. While testing the models, one identified Neymar, the world-renowned Brazilian footballer, as at risk of injury. Funny enough, a week earlier, Neymar sustained an injury during a match against Serbia in the 2022 Qatar World Cup. It seemed the model was onto something. However, it's important to note that Neymar has a history of numerous injuries, a factor that is highly correlated with the model's predictions.
 
 Nonetheless, this investigation aimed to develop models to flag players potentially at risk of injury. Early data exploration uncovered weak feature correlations and inherent dataset issues. Initial performances of models including LR, RF, and ANN, were less than stellar.
 
