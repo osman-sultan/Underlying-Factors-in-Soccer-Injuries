@@ -39,23 +39,10 @@ Brazil, favourites to win the 2014 FIFA World Cup, saw their prospects diminish 
 
 The following libraries are used in this project:
 
-- **Pandas and Numpy**: These libraries are fundamental for data manipulation and analysis.
-
-- **Matplotlib**: Used for data visualization to create insightful charts and plots.
-
-- **TensorFlow and Keras**: These two powerful libraries are used for creating and training the Neural Network used in the project.
-
-- **Scikit-Learn**: A comprehensive machine learning library used in this project for tasks such as training classifiers, model selection, and preprocessing.
-
-- **Ast**: Used for working with Python's abstract syntax trees, which are crucial for certain data manipulation tasks.
-
-- **OS and Warnings**: Used for interacting with the operating system and handling warnings, ensuring smooth execution of the code.
-
-- **Datetime**: An essential library for manipulating dates and times, crucial for certain data preprocessing tasks.
-
-- **Re**: Used for working with regular expressions, allowing for advanced string manipulation.
-
-- **Requests and BeautifulSoup4**: These libraries are used for web scraping tasks, to collect the necessary data for analysis.
+- Pandas, Numpy, Matplotlib
+- Scikit-Learn
+- TensorFlow and Keras
+- BeautifulSoup4
 
 ## Data Collection
 
